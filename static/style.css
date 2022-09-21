@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: url(./images/stone\ .jpeg);
+    background-size: cover;
+}
+.stone{
+    text-align: center;
+    margin: 20px auto;
+    
+
+}
+.head{
+    text-align: center;
+}
+.stone a button{
+    font-size: 50px;
+    margin: 50px auto;
+    border-radius: 25px;
+    padding: 15px;
+    
+   
+}
+.stone a{
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    font-size: 80px;
+    
+}
+.cp{
+    text-align: center;
+    font-size: 50px;
+
+}

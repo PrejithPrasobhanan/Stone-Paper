@@ -6,13 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winner</title>
     <link rel="stylesheet" href="/static/style.css">
-    <script src="https://kit.fontawesome.com/07b4befa7c.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/4c21781314.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
+
+    {% if computer == player_move %}
+    <h1>tie</h1>
+    {%else%}
     <h1>{{prejith}} is winner</h1>
-    <p class="cp">Computer:{{computer}}</p>
-    <p class="cp">Player:{{player_move}}</p>
+    {%endif%}
+
+  
+    {% if player_move == 'stone' and computer == 'paper' %}
+        <h1>player_move:<i class="fa-solid fa-hand-back-fist"></i> computer: <i class="fa-solid fa-hand"></i></h1>
+    {% elif player_move  == 'paper' and computer == 'scissors' %}
+        <h1>player_move:<i class="fa-solid fa-hand"></i>computer: <i class="fa-solid fa-hand-scissors"></i></h1>
+    {% elif player_move == 'scissors' and computer == 'stone' %}
+        <h1>player_move:<i class="fa-solid fa-hand-scissors"></i> computer:<i class="fa-solid fa-hand-back-fist"></i> </h1>
+    {%  elif player_move == 'paper' and computer == 'pencil' %}
+        <h1>player_move: <i class="fa-solid fa-hand"></i> computer:  <i class="fa-solid fa-hand-point-up"></i></h1>
+
+    {% elif computer == 'stone' and player_move == 'paper' %}
+        <h1>computer:<i class="fa-solid fa-hand-back-fist"></i> player_move: <i class="fa-solid fa-hand"></i></h1>
+    {% elif computer   == 'paper' and player_move== 'scissors' %}
+        <h1>computer :<i class="fa-solid fa-hand"></i>player_move: <i class="fa-solid fa-hand-scissors"></i></h1>
+    {% elif computer  == 'scissors' and player_move== 'stone' %}
+        <h1>computer :<i class="fa-solid fa-hand-scissors"></i> player_move: <i class="fa-solid fa-hand-back-fist"></i> </h1>
+    {%  elif computer  == 'paper' and player_move== 'pencil' %}
+        <h1>computer : <i class="fa-solid fa-hand"></i> player_move:  <i class="fa-solid fa-hand-point-up"></i></h1>
+    {%  elif computer  == 'pencil' and player_move== 'stone' %}
+        <h1>computer :<i class="fa-solid fa-hand-point-up"></i>player_move:  <i class="fa-solid fa-hand-back-fist"></i></h1>
+    {% elif computer  == 'scissors' and player_move== 'pencil' %}
+        <h1>computer :<i class="fa-solid fa-hand-scissors"></i> player_move: <i class="fa-solid fa-hand-point-up"></i> </h1>
+    {% endif %}
+
+    <div class="again">
+    <a href="{{url_for('index')}}"><h3>Play Again</h3></a>
+    </div>
+
+
+
+
+
+    
 
 </body>
 </html>

@@ -13,13 +13,13 @@ def winner(computer_move , player_move):
     if computer_move == player_move:
         winner ='tie'
     elif player_move == 'stone' and computer_move == 'paper':
-        winner= computer
+        winner= 'computer'
     elif player_move == 'paper' and computer_move == 'scissors':
-        winner= computer
+        winner= 'computer'
     elif player_move == 'scissors' and computer_move == 'stone':
-        winner= computer
+        winner= 'computer'
     elif player_move == 'paper' and computer_move == 'pencil':
-        winner= computer
+        winner= 'computer'
     else:
         winner = 'player'
 
@@ -39,7 +39,7 @@ def prejith(choice):
     winner_g=winner(computer,player_move)
     print(winner_g)
     
-    return render_template('winner.html',prejith = winner_g,computer=computer,player_move=player_move)
+    return render_template('winner.html',prejith = winner_g,computer=computer,player_move=player_move) 
 
 if __name__=='__main__':
     app.run(port=7000)
